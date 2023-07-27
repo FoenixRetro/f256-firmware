@@ -1,0 +1,6 @@
+[submodule "extern/superbasic"]
+	path = extern/superbasic
+	url = https://github.com/paulscottrobson/superbasic.git
+[submodule "extern/kernel_dos"]
+	path = extern/kernel_dos
+	url = https://github.com/ghackwrench/F256_Jr_Kernel_DOS.git
