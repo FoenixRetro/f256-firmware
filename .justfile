@@ -16,7 +16,8 @@ build:
 
     cp extern/kernel_dos/kernel/3?.bin {{build_dir}}
 
-    cp extern/pexec_gadget.bin {{build_dir}}/pexec.bin
+    #cp extern/pexec_gadget.bin {{build_dir}}/pexec.bin
+    cp extern/superbasic/howto/update/pexec.bin {{build_dir}}
 
     cp extern/superbasic/howto/update/fnxmgr.zip {{build_dir}}
 
