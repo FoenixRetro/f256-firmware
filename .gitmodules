@@ -6,3 +6,6 @@
 	url = https://github.com/csoren/F256_Jr_Kernel_DOS
 [submodule "extern/kernel_dos/"]
 	branch = exe
+[submodule "extern/hello"]
+	path = extern/hello
+	url = https://github.com/csoren/f256-dos-hello.git
