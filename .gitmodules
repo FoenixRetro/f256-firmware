@@ -9,3 +9,6 @@
 [submodule "extern/hello"]
 	path = extern/hello
 	url = https://github.com/csoren/f256-dos-hello.git
+[submodule "extern/dwsJason-f256"]
+	path = extern/dwsJason-f256
+	url = https://github.com/csoren/dwsJason-f256
