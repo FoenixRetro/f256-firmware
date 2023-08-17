@@ -1,6 +1,6 @@
 [submodule "extern/superbasic"]
 	path = extern/superbasic
-	url = https://github.com/paulscottrobson/superbasic
+	url = https://github.com/csoren/superbasic.git
 [submodule "extern/kernel_dos"]
 	path = extern/kernel_dos
 	url = https://github.com/csoren/F256_Jr_Kernel_DOS
@@ -12,3 +12,6 @@
 [submodule "extern/dwsJason-f256"]
 	path = extern/dwsJason-f256
 	url = https://github.com/csoren/dwsJason-f256
+[submodule "extern/Foenix-F256JR-bootscreens"]
+	path = extern/Foenix-F256JR-bootscreens
+	url = https://github.com/csoren/Foenix-F256JR-bootscreens.git

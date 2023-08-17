@@ -1,23 +1,44 @@
 build_dir := "_build"
+samples_dir := "_build/samples"
 release_zip := "firmware.zip"
 
-build: clean shipping hello dos pexec
+build: clean dirs shipping hello hello-pgx dos basic pexec
     cp extern/kernel_dos/kernel/3?.bin {{build_dir}}
+    cp extern/balls.kup {{samples_dir}}
 
     rm {{release_zip}}
     cd {{build_dir}}; zip ../{{release_zip}} * 
 
+@dirs:
+    mkdir {{build_dir}}
+    mkdir {{samples_dir}}
+
 @shipping:
     #!/bin/sh
     cd extern/shipping
-    cp bulk.csv fnxmgr.zip foenixmgr.ini lockout.bin README.txt SETUPHARDWARE.txt update.bat update.sh xrusbser_2600_signed_win7.zip sb*.bin {{justfile_directory()}}/{{build_dir}}
+    cp bulk.csv fnxmgr.zip foenixmgr.ini lockout.bin README.txt SETUPHARDWARE.txt update.bat update.sh xrusbser_2600_signed_win7.zip {{justfile_directory()}}/{{build_dir}}
+
+@basic:
+    #!/bin/sh
+    cd extern/superbasic/source
+    make -B basic release
+    cd ../../..
+    cp extern/superbasic/source/release/sb0?.bin {{build_dir}}
 
 @hello:
     #!/bin/sh
     cd extern/hello
     make
     cd ../..
-    cp extern/hello/hello {{build_dir}}
+    cp extern/hello/hello.pgz {{samples_dir}}
+    cp extern/hello/hello.kup {{samples_dir}}
+
+@hello-pgx:
+    #!/bin/sh
+    cd extern/dwsJason-f256/merlin32/hello
+    merlin32 -V hello.s
+    cd ../../../..
+    cp extern/dwsJason-f256/merlin32/hello/hello.pgx {{samples_dir}}
 
 @dos:
     #!/bin/sh
@@ -41,6 +62,9 @@ build: clean shipping hello dos pexec
 @flash-dos port="/dev/ttyUSB0": dos
     cd {{build_dir}}; python fnxmgr.zip --port {{port}} --flash dos.bin --flash-sector 5
     
+@run-dos port="/dev/ttyUSB0": dos
+    cd {{build_dir}}; python fnxmgr.zip --port {{port}} --binary dos.bin --address A000
+    
 @flash-pexec port="/dev/ttyUSB0": pexec
     cd {{build_dir}}; python fnxmgr.zip --port {{port}} --flash pexec.bin --flash-sector 6
     
@@ -48,6 +72,7 @@ build: clean shipping hello dos pexec
     cd extern/hello; make clean
     cd extern/dwsJason-f256; rm -f pexec.bin
     cd extern/kernel_dos; rm -f kernel/dos.bin dos_jr.bin dos_jr.lst
+    rm -rf {{build_dir}}
 
 @clear:
 	dd if=/dev/zero of=_zero.bin bs=1024 count=64

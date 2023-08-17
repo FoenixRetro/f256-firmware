@@ -1,5 +1,7 @@
 # Foenix F256 firmware flash
-This repository pulls together the different components that make up the Foenix F256 line of computers' flash content.
+This repository pulls together the different components that make up the Foenix F256 line of computers' flash content, and serves as a development hub for improving the firmware.
+
+Please see [this document](Changes.md) for a list of changes and features currently in testing.
 
 To use, clone the repository recursively
 
