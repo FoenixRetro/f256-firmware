@@ -1,11 +1,13 @@
 # Updates since last shipping release
 A number of changes have been implemented, both new features but also some warts have been removed.
 
-The TL;DR is: We can now reliably use `pexec` to launch programs from both DOS and SuperBASIC. DOS and SuperBASIC can't load PGZ and PGX, these tasks are delegated to `pexec` with the `-` executable name. SuperBASIC's `/` command can be used to launch any flash resident user program, `-` is `pexec`. To launch a program from SuperBASIC, `/- program.pgz` can be used. To launch a program from DOS, `- program.pgz` is used. 
+The TL;DR is: **We can now reliably use `pexec` to launch programs from both DOS and SuperBASIC.**
+
+ DOS and SuperBASIC can't load PGZ and PGX, these tasks are delegated to `pexec` with the `-` executable name. SuperBASIC's `/` command can be used to launch any flash resident user program, `-` is `pexec`. To launch a program from SuperBASIC, `/- program.pgz` can be used. To launch a program from DOS, `- program.pgz` is used. 
 
 DOS can also load a kernel user program (or "KUP") from disk, these could until now only be run from flash. This does not require using `-`.
 
-To try some of these features, copy the programs in the `samples` directory to an SD card. To switch from SuperBASIC to DOS, issue the command `/dos`. To switch from DOS to SuperBASIC, issue the command `basic`.
+To try some of these features, copy the programs in the `samples` directory to an SD card. To switch from SuperBASIC to DOS, issue the command `/dos`. To switch from DOS to SuperBASIC, issue the command `basic`. There's a few "hello, world" type programs, and the bouncing, multiplexed balls demo.
 
 In DOS you can try:
 
@@ -40,6 +42,13 @@ Arguments are passed in the `ext` and `extlen` kernel arguments. This approach h
 
 # Returning from a program
 A KUP loaded from disk may exit back to DOS by issuing an RTS instruction. Additionally the carry may be set if the machine should be reset, or carry clear to continue running DOS. Be aware that you must leave the MMU configuration in the state you found it. You should also keep away from the $0200-$07FF range completely.
+
+# Future work
+`balls.kup` should be `balls.pgz`. In the sample distribution, the ball sprite demo is a .kup. KUPs should only be used for programs that extend and augment DOS. Other programs, such as demos and games, should be distributed as .pgx or .pgz so thay can be launched from both DOS and SuperBASIC.
+
+The `keys` program should be moved out of DOS and made a KUP.
+
+A `copy` command will be implemented in DOS.
 
 # Details
 These are some more details on the changes.
