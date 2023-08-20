@@ -7,7 +7,7 @@ build: clean dirs shipping hello hello-pgx dos basic pexec
     cp extern/balls.kup {{samples_dir}}
 
     rm {{release_zip}}
-    cd {{build_dir}}; zip ../{{release_zip}} * 
+    cd {{build_dir}}; zip -r ../{{release_zip}} * 
 
 @dirs:
     mkdir {{build_dir}}

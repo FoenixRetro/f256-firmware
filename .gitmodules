@@ -11,7 +11,7 @@
 	url = https://github.com/csoren/f256-dos-hello.git
 [submodule "extern/dwsJason-f256"]
 	path = extern/dwsJason-f256
-	url = https://github.com/csoren/dwsJason-f256
+	url = https://github.com/dwsJason/f256.git
 [submodule "extern/Foenix-F256JR-bootscreens"]
 	path = extern/Foenix-F256JR-bootscreens
 	url = https://github.com/csoren/Foenix-F256JR-bootscreens.git
