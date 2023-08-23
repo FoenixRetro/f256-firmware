@@ -1,9 +1,14 @@
 # Foenix F256 firmware flash
-This repository pulls together the different components that make up the Foenix F256 line of computers' flash content, and serves as a development hub for improving the firmware.
+This repository is the distribution and development hub for the Foenix F256 line of modern retro computers. It pulls together the different components that make up the flash content, and includes the latest FPGA loads.
+
+**To download the latest firmware and FPGA loads**, please visit the [Releases](releases) page.
+
+**For instructions on how to upgrade**, please see the [Upgrade](HowToUpgrade.md) document.
 
 Please see [this document](Changes.md) for a list of changes and features currently in testing.
 
-To use, clone the repository recursively
+## Building
+To work on the firmware or build it from scratch, clone the repository recursively:
 
 ```
 git clone --rec https://github.com/csoren/f256-flash.git
