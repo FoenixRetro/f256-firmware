@@ -5,6 +5,7 @@ This repository is the distribution and development hub for the Foenix F256 line
 
 **For instructions on how to upgrade**, please see the [Upgrade](HowToUpgrade.md) document.
 
+# What's new?
 Please see [this document](Changes.md) for a list of changes and features currently in testing.
 
 ## Building
