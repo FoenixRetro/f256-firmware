@@ -1,17 +1,18 @@
 [submodule "extern/superbasic"]
 	path = extern/superbasic
-	url = https://github.com/csoren/superbasic.git
+	url = https://github.com/FoenixRetro/f256-superbasic
 [submodule "extern/kernel_dos"]
 	path = extern/kernel_dos
-	url = https://github.com/csoren/F256_Jr_Kernel_DOS
+	url = https://github.com/FoenixRetro/F256_Jr_Kernel_DOS
 [submodule "extern/kernel_dos/"]
 	branch = exe
+	url = https://github.com/FoenixRetro/f256-kernel-dos.git
 [submodule "extern/hello"]
 	path = extern/hello
-	url = https://github.com/csoren/f256-dos-hello.git
+	url = https://github.com/FoenixRetro/f256-dos-hello.git
 [submodule "extern/dwsJason-f256"]
 	path = extern/dwsJason-f256
-	url = https://github.com/dwsJason/f256.git
+	url = https://github.com/FoenixRetro/dwsJason-f256.git
 [submodule "extern/Foenix-F256JR-bootscreens"]
 	path = extern/Foenix-F256JR-bootscreens
-	url = https://github.com/csoren/Foenix-F256JR-bootscreens.git
+	url = https://github.com/FoenixRetro/f256-bootscreens.git
