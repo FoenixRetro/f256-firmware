@@ -1,6 +1,6 @@
 [submodule "extern/superbasic"]
 	path = extern/superbasic
-	url = https://github.com/FoenixRetro/superbasic
+	url = https://github.com/FoenixRetro/f256-superbasic
 [submodule "extern/kernel_dos"]
 	path = extern/kernel_dos
 	url = https://github.com/FoenixRetro/F256_Jr_Kernel_DOS
