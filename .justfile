@@ -67,16 +67,16 @@ build: clean dirs shipping hello hello-pgx dos basic pexec fpga
 
 
 @flash port="/dev/ttyUSB0": build
-    cd {{build_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk bulk.csv
+    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk bulk.csv
     
 @flash-dos port="/dev/ttyUSB0": dos
-    cd {{build_dir}}; python fnxmgr.zip --port {{port}} --flash dos.bin --flash-sector 5
+    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash dos.bin --flash-sector 5
     
 @run-dos port="/dev/ttyUSB0": dos
-    cd {{build_dir}}; python fnxmgr.zip --port {{port}} --binary dos.bin --address A000
+    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --binary dos.bin --address A000
     
 @flash-pexec port="/dev/ttyUSB0": pexec
-    cd {{build_dir}}; python fnxmgr.zip --port {{port}} --flash pexec.bin --flash-sector 6
+    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash pexec.bin --flash-sector 6
     
 @clean:
     cd extern/hello; make clean
