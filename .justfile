@@ -4,14 +4,14 @@ samples_dir := "shipping/samples"
 fpga_dir := "shipping/fpga"
 release_zip := "firmware.zip"
 
-@basic:
+basic:
     #!/bin/sh
     cd extern/superbasic/source
     make -B basic release
     cd ../../..
     cp extern/superbasic/source/release/sb0?.bin {{firmware_dir}}
 
-@hello:
+hello:
     #!/bin/sh
     cd extern/hello
     make
@@ -32,6 +32,10 @@ dos:
     make dos_jr.bin
     cd ../..
     cp extern/kernel_dos/dos_jr.bin {{firmware_dir}}/dos.bin
+
+kernel:
+    #!/bin/sh
+    cp extern/kernel_dos/kernel/3?.bin {{firmware_dir}}
 
 pexec:
     #!/bin/sh
@@ -69,6 +73,7 @@ docs:
 	rm _zero.bin
 
 @release version="2023.next":
+    cp Changelog.md {{build_dir}}
     cp HowToUpgrade.md {{build_dir}}
     cp Versions.jpg {{build_dir}}
     cd {{build_dir}}; zip -r ../f256_firmware_{{version}}.zip * 

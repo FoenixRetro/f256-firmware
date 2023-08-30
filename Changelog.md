@@ -1,16 +1,19 @@
 # 2023.2
 
-### Kernel
-The TinyCore MicroKernel has been updated to the latest version. This requires an update to the FPGA load, which is included.
-
-### Help system
-The [help system](https://github.com/wibbe/foenix-help) by wibbe has been. It can be accessed from SuperBASIC by typing `/help`. Please be aware that you will lose whatever you were working on, so be sure to save first.
-
 ### FPGA
 Updated F256 Jr FPGA load.
 
+### Kernel
+The TinyCore MicroKernel has been updated to the latest version. This requires an update to the FPGA load, which is included.
+
+### SuperBASIC
+The "slash" and `load` command will now fail if there are any unsaved changes. The user will have to issue the `new` command, or save their work.
+
 ### pexec (-)
 Occasional failure when opening file to load fixed.
+
+### Help system
+The [help system](https://github.com/wibbe/foenix-help) by wibbe has been added. It can be accessed from SuperBASIC by typing `/help`.
 
 
 # 2023.1
