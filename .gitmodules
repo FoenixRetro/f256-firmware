@@ -16,3 +16,6 @@
 [submodule "extern/Foenix-F256JR-bootscreens"]
 	path = extern/Foenix-F256JR-bootscreens
 	url = https://github.com/FoenixRetro/f256-bootscreens.git
+[submodule "extern/docs"]
+	path = extern/docs
+	url = https://github.com/FoenixRetro/f256-foenix-help.git

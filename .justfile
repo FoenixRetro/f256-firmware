@@ -19,27 +19,30 @@ release_zip := "firmware.zip"
     cp extern/hello/hello.pgz {{samples_dir}}
     cp extern/hello/hello.kup {{samples_dir}}
 
-@hello-pgx:
+hello-pgx:
     #!/bin/sh
     cd extern/dwsJason-f256/merlin32/hello
     merlin32 -V hello.s
     cd ../../../..
     cp extern/dwsJason-f256/merlin32/hello/hello.pgx {{samples_dir}}
 
-@dos:
+dos:
     #!/bin/sh
     cd extern/kernel_dos
     make dos_jr.bin
     cd ../..
     cp extern/kernel_dos/dos_jr.bin {{firmware_dir}}/dos.bin
 
-@pexec:
+pexec:
     #!/bin/sh
     cd extern/dwsJason-f256/merlin32/pexec
     merlin32 -V pexec.s
     cd ../../../..
     cp extern/dwsJason-f256/merlin32/pexec/pexec.bin {{firmware_dir}}
 
+docs:
+    #!/bin/sh
+    cp extern/docs/release/*.bin {{firmware_dir}}
 
 
 @flash port="/dev/ttyUSB0":
