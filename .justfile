@@ -1,32 +1,8 @@
-build_dir := "_build"
-firmware_dir := "_build/firmware"
-samples_dir := "_build/samples"
-fpga_dir := "_build/fpga"
+build_dir := "shipping"
+firmware_dir := "shipping/firmware"
+samples_dir := "shipping/samples"
+fpga_dir := "shipping/fpga"
 release_zip := "firmware.zip"
-
-build: clean dirs shipping hello hello-pgx dos basic pexec fpga
-    cp extern/kernel_dos/kernel/3?.bin {{firmware_dir}}
-    cp samples/balls.kup {{samples_dir}}
-
-    rm -f {{release_zip}}
-    cd {{build_dir}}; zip -r ../{{release_zip}} * 
-
-@fpga:
-    cp fpga/* {{fpga_dir}}
-
-@dirs:
-    mkdir {{build_dir}}
-    mkdir {{samples_dir}}
-    mkdir {{firmware_dir}}
-    mkdir {{fpga_dir}}
-
-@shipping:
-    #!/bin/sh
-    cd extern/shipping
-    cp bulk.csv fnxmgr.zip foenixmgr.ini lockout.bin update.bat update.sh xrusbser_2600_signed_win7.zip {{justfile_directory()}}/{{firmware_dir}}
-    cp README.txt SETUPHARDWARE.txt {{justfile_directory()}}/{{build_dir}}
-    cd ../..
-    cp HowToUpgrade.md Versions.jpg {{justfile_directory()}}/{{build_dir}}
 
 @basic:
     #!/bin/sh
@@ -66,7 +42,7 @@ build: clean dirs shipping hello hello-pgx dos basic pexec fpga
 
 
 
-@flash port="/dev/ttyUSB0": build
+@flash port="/dev/ttyUSB0":
     cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk bulk.csv
     
 @flash-dos port="/dev/ttyUSB0": dos
@@ -89,3 +65,7 @@ build: clean dirs shipping hello hello-pgx dos basic pexec fpga
 	fnxmgr --address 0 --binary _zero.bin
 	rm _zero.bin
 
+@release version="2023.next":
+    cp HowToUpgrade.md {{build_dir}}
+    cp Versions.jpg {{build_dir}}
+    cd {{build_dir}}; zip -r ../f256_firmware_{{version}}.zip * 
