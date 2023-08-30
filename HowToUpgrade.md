@@ -4,7 +4,7 @@ Upgrading is a two-step process - the FPGA load is updated using an Altera/Intel
 
 ## Flashing the FPGA
 
-The FPGA load only has to be updated if the version number has changed. The first four digits of the "Hardware" revision (in this case "0013") indicate the current version. In the release's `fpga` folder you will find two files, one for the F256K and one for the F256 Jr. The part of the filename called eg. `RC14` is the version number of the new load. If it is greater than the current version, you have to flash the FPGA. You should of course select the file that is suitable for your computer, either `F256K` or `F256Jr`.
+The FPGA load only has to be updated if the version number has changed. The first eight digits of the "Hardware" revision (in this case "0013" and "0018") indicate the current major and minor version number. In the release's `fpga` folder you will find two files, one for the F256K and one for the F256 Jr. The part of the filename called eg. `RC14_0009` is the major and minor version number of the new load. If it is greater than the current version, you have to flash the FPGA. You should of course select the file that is suitable for your computer, either `F256K` or `F256Jr`.
 
 ![Version numbers on the bootscreen](Versions.jpg)
 
