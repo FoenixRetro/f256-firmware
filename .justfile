@@ -76,6 +76,7 @@ docs:
 	rm _zero.bin
 
 @release version="2023.next":
+    rm -f f256_firmware_{{version}}.zip
     cp Changelog.md {{build_dir}}
     cp HowToUpgrade.md {{build_dir}}
     cp Versions.jpg {{build_dir}}
