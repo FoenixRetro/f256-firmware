@@ -55,6 +55,9 @@ docs:
 @flash-dos port="/dev/ttyUSB0": dos
     cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash dos.bin --flash-sector 5
     
+@flash-basic port="/dev/ttyUSB0": basic
+    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk ../../basic_bulk.csv
+    
 @run-dos port="/dev/ttyUSB0": dos
     cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --binary dos.bin --address A000
     

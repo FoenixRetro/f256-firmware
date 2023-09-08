@@ -6,8 +6,17 @@ Updated F256 Jr FPGA load.
 ### Kernel
 The TinyCore MicroKernel has been updated to the latest version. This requires an update to the FPGA load, which is included.
 
+The kernel now fails when trying to save a file with an empty filename.
+
+### DOS
+A new `cp` (copy) command has been added to DOS.
+
+Delete and run external command now respect drive prefix.
+
 ### SuperBASIC
-The "slash" and `load` command will now fail if there are any unsaved changes. The user will have to issue the `new` command, or save their work.
+The "slash", `load`, and `new` commands will now ask the user if they want to continue, if there are any unsaved changes.
+
+Displays proper error message when file not found on SD card.
 
 ### pexec (-)
 Occasional failure when opening file to load fixed.
