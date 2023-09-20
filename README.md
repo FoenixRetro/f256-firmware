@@ -1,7 +1,7 @@
 # Foenix F256 firmware flash
 This repository is the distribution and development hub for the Foenix F256 line of modern retro computers. It pulls together the different components that make up the flash content, and includes the latest FPGA loads.
 
-**To download the latest firmware and FPGA loads**, please visit the [Releases](releases) page.
+**To download the latest firmware and FPGA loads**, please visit the https://github.com/FoenixRetro/f256-firmware/releases page.
 
 **For instructions on how to upgrade**, please see the [Upgrade](HowToUpgrade.md) document.
 
