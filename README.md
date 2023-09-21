@@ -12,7 +12,7 @@ Please see [this document](Changes.md) for a list of changes and features curren
 To work on the firmware or build it from scratch, clone the repository recursively:
 
 ```
-git clone --rec https://github.com/csoren/f256-flash.git
+git clone --rec https://github.com/FoenixRetro/f256-flash.git
 ```
 
 Run the `build` recipe, this will give you a `_build` directory containing the necessary components for flashing the F256 computer.

@@ -1,3 +1,13 @@
+# 2023.3
+
+This version contains no changes relevant to the F256 Jr.
+
+### Kernel
+The TinyCore MicroKernel has been updated to the latest version.
+
+This version fixes the the F256K keyboard map. TAB and RALT were swapped, and the ALT logic was looking at the Foenix key.
+
+
 # 2023.2
 
 ### FPGA
