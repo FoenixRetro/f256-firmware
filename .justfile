@@ -28,14 +28,17 @@ hello-pgx:
 
 dos:
     #!/bin/sh
-    cd extern/kernel_dos
+    cd extern/dos
     make dos_jr.bin
     cd ../..
-    cp extern/kernel_dos/dos_jr.bin {{firmware_dir}}/dos.bin
+    cp extern/dos/dos_jr.bin {{firmware_dir}}/dos.bin
 
 kernel:
     #!/bin/sh
-    cp extern/kernel_dos/kernel/3?.bin {{firmware_dir}}
+    cd extern/microkernel
+    make
+    cd ../..
+    cp extern/microkernel/3?.bin {{firmware_dir}}
 
 pexec:
     #!/bin/sh

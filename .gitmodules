@@ -4,9 +4,6 @@
 [submodule "extern/kernel_dos"]
 	path = extern/kernel_dos
 	url = https://github.com/FoenixRetro/F256_Jr_Kernel_DOS
-[submodule "extern/kernel_dos/"]
-	branch = exe
-	url = https://github.com/FoenixRetro/f256-kernel-dos.git
 [submodule "extern/hello"]
 	path = extern/hello
 	url = https://github.com/FoenixRetro/f256-dos-hello.git
@@ -19,3 +16,9 @@
 [submodule "extern/docs"]
 	path = extern/docs
 	url = https://github.com/FoenixRetro/f256-foenix-help.git
+[submodule "extern/dos"]
+	path = extern/dos
+	url = https://github.com/FoenixRetro/f256-dos.git
+[submodule "extern/microkernel"]
+	path = extern/microkernel
+	url = https://github.com/FoenixRetro/f256-microkernel.git
