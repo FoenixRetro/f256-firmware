@@ -42,10 +42,10 @@ kernel:
 
 pexec:
     #!/bin/sh
-    cd extern/dwsJason-f256/merlin32/pexec
+    cd extern/pexec
     merlin32 -V pexec.s
-    cd ../../../..
-    cp extern/dwsJason-f256/merlin32/pexec/pexec.bin {{firmware_dir}}
+    cd ../../
+    cp extern/pexec/pexec.bin {{firmware_dir}}
 
 docs:
     #!/bin/sh
