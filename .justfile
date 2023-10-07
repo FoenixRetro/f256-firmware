@@ -40,6 +40,14 @@ docs:
     cp extern/docs/bin/help.bin {{firmware_dir}}
     cp extern/docs/bin/docs/docs_superbasic?.bin {{firmware_dir}}
 
+xdev:
+    #!/bin/sh
+    cd extern/xdev
+    merlin32 -V xdev.s
+    cd ../../
+    cp extern/xdev/xdev.bin {{firmware_dir}}
+
+
 
 @flash port="/dev/ttyUSB0":
     cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk bulk.csv
