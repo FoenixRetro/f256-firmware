@@ -49,7 +49,11 @@ pexec:
 
 docs:
     #!/bin/sh
-    cp extern/docs/release/*.bin {{firmware_dir}}
+    cd extern/docs
+    make
+    cd ../..
+    cp extern/docs/bin/help.bin {{firmware_dir}}
+    cp extern/docs/bin/docs/docs_superbasic?.bin {{firmware_dir}}
 
 
 @flash port="/dev/ttyUSB0":
@@ -57,6 +61,9 @@ docs:
     
 @flash-dos port="/dev/ttyUSB0": dos
     cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash dos.bin --flash-sector 5
+    
+@flash-docs-exe port="/dev/ttyUSB0": docs
+    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash help.bin --flash-sector 10
     
 @flash-basic port="/dev/ttyUSB0": basic
     cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk ../../basic_bulk.csv
