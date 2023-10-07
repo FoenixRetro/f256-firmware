@@ -22,3 +22,6 @@
 [submodule "extern/pexec"]
 	path = extern/pexec
 	url = https://github.com/FoenixRetro/f256-pexec.git
+[submodule "extern/xdev"]
+	path = extern/xdev
+	url = https://github.com/FoenixRetro/f256-xdev.git
