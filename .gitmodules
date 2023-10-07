@@ -4,12 +4,6 @@
 [submodule "extern/kernel_dos"]
 	path = extern/kernel_dos
 	url = https://github.com/FoenixRetro/F256_Jr_Kernel_DOS
-[submodule "extern/hello"]
-	path = extern/hello
-	url = https://github.com/FoenixRetro/f256-dos-hello.git
-[submodule "extern/dwsJason-f256"]
-	path = extern/dwsJason-f256
-	url = https://github.com/FoenixRetro/dwsJason-f256.git
 [submodule "extern/Foenix-F256JR-bootscreens"]
 	path = extern/Foenix-F256JR-bootscreens
 	url = https://github.com/FoenixRetro/f256-bootscreens.git
@@ -22,3 +16,9 @@
 [submodule "extern/microkernel"]
 	path = extern/microkernel
 	url = https://github.com/FoenixRetro/f256-microkernel.git
+[submodule "extern/pexec"]
+	path = extern/pexec
+	url = https://github.com/FoenixRetro/f256-pexec.git
+[submodule "extern/xdev"]
+	path = extern/xdev
+	url = https://github.com/FoenixRetro/f256-xdev.git

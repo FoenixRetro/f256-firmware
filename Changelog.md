@@ -1,11 +1,16 @@
 # 2023.4 (in progress)
-This firmware release adds the ability to display the installed flash resident programs. In DOS these are now displayed by the `help` command. Kernel user programs are now able to communicate their parameters and a description string to the user. To enable this feature, the kernel user program header has been bumped to version 1 and extended.
+**Overall** - This firmware release adds the ability to display the installed flash resident programs. In DOS these are now displayed by the `help` command. Kernel user programs are now able to communicate their parameters and a description string to the user. Descriptions have been added to all firmware componenents. To enable this feature, the kernel user program header has been bumped to version 1 and extended.
 
 ### DOS
 The `help` command will now display installed programs in expansion memory and on-board flash.
 
+Allow "slash" prefix to command, both for consistency with SuperBASIC, but it will also bypass matching internal commands, enabling execution of same  resident programs, such as `help`.
+
 ### SuperBASIC
 Added description string to SuperBASIC.
+
+### SuperBASIC help viewer
+Added description string. ESC key now handled on Jr.
 
 ### DOS
 Added description string to DOS.
