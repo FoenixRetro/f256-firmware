@@ -4,9 +4,6 @@
 [submodule "extern/kernel_dos"]
 	path = extern/kernel_dos
 	url = https://github.com/FoenixRetro/F256_Jr_Kernel_DOS
-[submodule "extern/hello"]
-	path = extern/hello
-	url = https://github.com/FoenixRetro/f256-dos-hello.git
 [submodule "extern/Foenix-F256JR-bootscreens"]
 	path = extern/Foenix-F256JR-bootscreens
 	url = https://github.com/FoenixRetro/f256-bootscreens.git
