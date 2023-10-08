@@ -22,3 +22,6 @@
 [submodule "extern/xdev"]
 	path = extern/xdev
 	url = https://github.com/FoenixRetro/f256-xdev.git
+[submodule "extern/fnxmgr"]
+	path = extern/fnxmgr
+	url = https://github.com/FoenixRetro/FoenixMgr.git

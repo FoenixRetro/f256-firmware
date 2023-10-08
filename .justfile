@@ -47,25 +47,32 @@ xdev:
     cd ../../
     cp extern/xdev/xdev.bin {{firmware_dir}}
 
-
+fnxmgr:
+    #!/bin/sh
+    cd extern/fnxmgr/FoenixMgr
+    cp fnxmgr.py __main__.py
+    rm ../../../shipping/firmware/fnxmgr.zip
+    zip ../../../shipping/firmware/fnxmgr.zip *.py -x fnxmgr.py
+    rm __main__.py    
+    cd ../../..
 
 @flash port="/dev/ttyUSB0":
-    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk bulk.csv
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash-bulk bulk.csv
     
 @flash-dos port="/dev/ttyUSB0": dos
-    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash dos.bin --flash-sector 5
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash dos.bin --flash-sector 6
     
 @flash-docs-exe port="/dev/ttyUSB0": docs
-    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash help.bin --flash-sector 10
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash help.bin --flash-sector 10
     
 @flash-basic port="/dev/ttyUSB0": basic
-    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash-bulk ../../basic_bulk.csv
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash-bulk ../../basic_bulk.csv
     
 @flash-pexec port="/dev/ttyUSB0": pexec
-    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --flash pexec.bin --flash-sector 6
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash pexec.bin --flash-sector 7
     
 @run-dos port="/dev/ttyUSB0": dos
-    cd {{firmware_dir}}; python fnxmgr.zip --port {{port}} --binary dos.bin --address A000
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --binary dos.bin --address A000
     
 @clean:
     rm -rf {{build_dir}}
