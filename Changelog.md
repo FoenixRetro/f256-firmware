@@ -7,6 +7,8 @@ The `help` command will now display installed programs in expansion memory and o
 Allow "slash" prefix to command, both for consistency with SuperBASIC, but it will also bypass matching internal commands, enabling execution of same  resident programs, such as `help`.
 
 ### SuperBASIC
+Increased expression stack, allowing more procedure parameters, and more complex expressions. Added checking and error reporting..
+
 Added description string to SuperBASIC.
 
 ### SuperBASIC help viewer
