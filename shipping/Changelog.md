@@ -1,5 +1,31 @@
-# 2023.3
+# 2023.4
+**Overall** - This firmware release adds the ability to display the installed flash resident programs. In DOS these are now displayed by the `help` command. Kernel user programs are now able to communicate their parameters and a description string to the user. Descriptions have been added to all firmware componenents. To enable this feature, the kernel user program header has been bumped to version 1 and extended.
 
+### DOS
+The `help` command will now display installed programs in expansion memory and on-board flash.
+
+Allow "slash" prefix to command, both for consistency with SuperBASIC, but it will also bypass matching internal commands, enabling execution of same named resident programs, such as `help`.
+
+### SuperBASIC
+Increased expression stack, allowing more procedure parameters, and more complex expressions. Added checking and error reporting..
+
+Added description string to SuperBASIC.
+
+### SuperBASIC help viewer
+Added description string. ESC key now handled on Jr.
+
+### DOS
+Added description string to DOS.
+
+### pexec (-)
+Added description string to pexec.
+
+### xdev
+Added new crossdev firmware module. With latest FoenixMgr, runpgx, and runpgz now can use a springboard that exists in the firmware, removing the requirement for expansion RAM. Also, if the kit is in RAM mode, the start address of the program will get poked into the reset vector as well (like the original code). Pcopy has been moved into this same module, the utility to copy files to your SDCARD.  Sometimes the machine does not reset properly when running a command from FoenixMgr.  This can make it seem like runpgx, runpgz, or pcopy is not working. If this happens, pressing reset on the physical machine usually fixes the issue.
+
+**A note on pcopy**: The checksum and filewriter are slow.  Wait for the program to report an error, or that the file copy is complete.  There will be optimizations to make this better, for now it's fine for small files.  Since the file being copied is just in main RAM, it has a filesize limitation of about 440k bytes.
+
+# 2023.3
 This version contains no changes relevant to the F256 Jr.
 
 ### Kernel
