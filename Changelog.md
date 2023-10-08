@@ -4,7 +4,7 @@
 ### DOS
 The `help` command will now display installed programs in expansion memory and on-board flash.
 
-Allow "slash" prefix to command, both for consistency with SuperBASIC, but it will also bypass matching internal commands, enabling execution of same  resident programs, such as `help`.
+Allow "slash" prefix to command, both for consistency with SuperBASIC, but it will also bypass matching internal commands, enabling execution of same named resident programs, such as `help`.
 
 ### SuperBASIC
 Increased expression stack, allowing more procedure parameters, and more complex expressions. Added checking and error reporting..
