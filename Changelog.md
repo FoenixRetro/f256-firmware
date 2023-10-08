@@ -20,6 +20,12 @@ Added description string to DOS.
 ### pexec (-)
 Added description string to pexec.
 
+### xdev
+Added new crossdev firmware module. With latest FoenixMgr, runpgx, and runpgz now can use a springboard that exists in the firmware, removing the requirement for expansion RAM. Also, if the kit is in RAM mode, the start address of the program will get poked into the reset vector as well (like the original code). Pcopy has been moved into this same module, the utility to copy files to your SDCARD.  I want to note, that at least for me, sometimes the machine does not reset properly when running a command from FoenixMgr. This can make it seem like runpgx, runpgz, or pcopy is not working. If this happens, pressing reset on the physical machine usually fixes the issue.
+
+### pcopy
+The checksum and filewriter are slow.  Wait for the program to report an error, or that the file copy is complete.  I'm sure that there will be optimizations to make this better.  For now it's fine for small files.  Since the file being copied is just in main RAM, it has a filesize limitation of about 440k bytes.
+
 # 2023.3
 This version contains no changes relevant to the F256 Jr.
 
