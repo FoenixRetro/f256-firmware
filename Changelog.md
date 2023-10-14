@@ -1,3 +1,9 @@
+# 2023.5 (not yet released)
+
+### DOS
+It is now possible to quote strings on the commandline, enabling spaces in arguments.
+
+
 # 2023.4
 **Overall** - This firmware release adds the ability to display the installed flash resident programs. In DOS these are now displayed by the `help` command. Kernel user programs are now able to communicate their parameters and a description string to the user. Descriptions have been added to all firmware componenents. To enable this feature, the kernel user program header has been bumped to version 1 and extended.
 
