@@ -5,6 +5,8 @@ It is now possible to quote strings on the commandline, enabling spaces in argum
 
 `help` command shows block info about flash resident programs.
 
+A splash of color for headlines and prompts.
+
 ### Kernel
 TCP: fixes partial ACKs and TCP.Recv status; implements Close.
 
