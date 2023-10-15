@@ -62,6 +62,9 @@ fnxmgr:
 @flash-dos port="/dev/ttyUSB0": dos
     cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash dos.bin --flash-sector 6
     
+@flash-xdev port="/dev/ttyUSB0": xdev
+    cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash xdev.bin --flash-sector 1
+    
 @flash-docs-exe port="/dev/ttyUSB0": docs
     cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash help.bin --flash-sector 10
     
