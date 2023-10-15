@@ -3,7 +3,7 @@
 ### DOS
 It is now possible to quote strings on the commandline, enabling spaces in arguments.
 
-`help` command shows block info about flash resident programs.
+Display of flash resident programs moved to new `lsf` command, and it now also shows block information.
 
 A splash of color for headlines and prompts.
 
