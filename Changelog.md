@@ -1,4 +1,4 @@
-# 2023.5 (not yet released)
+# 2023.5
 
 ### DOS
 It is now possible to quote strings on the commandline, enabling spaces in arguments.
