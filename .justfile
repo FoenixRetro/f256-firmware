@@ -56,6 +56,10 @@ fnxmgr:
     rm __main__.py    
     cd ../../..
 
+fnxmgr-install: fnxmgr
+    #!/bin/sh
+    unzip -o shipping/firmware/fnxmgr.zip -d $HOME/.local/share/FoenixMgr/FoenixMgr
+
 @flash port="/dev/ttyUSB0":
     cd {{firmware_dir}}; python fnxmgr.zip --target f256k --port {{port}} --flash-bulk bulk.csv
     
