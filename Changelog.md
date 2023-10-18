@@ -1,3 +1,9 @@
+# 2023.6 (in progress)
+
+### SuperBASIC
+
+Fixed wrong error reporting in `verify` command.
+
 # 2023.5
 
 ### DOS
