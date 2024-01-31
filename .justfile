@@ -39,6 +39,8 @@ docs:
     cd ../..
     cp extern/docs/bin/help.bin {{firmware_dir}}
     cp extern/docs/bin/docs/docs_superbasic?.bin {{firmware_dir}}
+    cp extern/docs/bin/docs/docs_superbasic_ref_1.bin {{firmware_dir}}/docs_superbasic3.bin
+    cp extern/docs/bin/docs/docs_superbasic_ref_2.bin {{firmware_dir}}/docs_superbasic4.bin
 
 xdev:
     #!/bin/sh
