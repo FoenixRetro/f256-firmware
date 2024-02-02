@@ -1,8 +1,68 @@
-# 2023.6 (in progress)
+# 2024.1 (RC1)
+
+### Kernel
+
+Kernel docs: note DIP6 function on the F256K, fix a typo.
+
+Binary prebuilds now included with commits.
+
+F256K: TCP: DIP6 selects smaller windows.
+
+F-Keys on scanned matrix keyboards now set the meta flag.
+
+TCP: handle rx sequence 32-bit wrap-around (*rare*).
+
+Larger TCP windows, PS2 KBD is ID #1, minor SD LED fix.
+
+TCP: fixes partial ACKs and TCP.Recv status; implements Close.
 
 ### SuperBASIC
 
 Fixed wrong error reporting in `verify` command.
+
+Add autorepeat functionality in BASIC editor
+
+### pexec
+
+Slot 5 remapping wasn't working due to a type-o, which also was leaving mmu in a bad state.
+
+pexec: updates to make the loading prettier, and communicate what pexec does more clearly. Also clear the screen when viewing pictures.
+
+Close file after loading PGZ, and increment version
+
+Fix issue where decompress pixels could return a bogus error
+
+TermPUTS, fix bug where if a <CR> is encountered, and it causes the screen to scroll, share temp variables may cause an infinite number of linefeeds to happen
+
+term.s: fix issue with the stack if the screen scrolls, but not by a CR
+
+term: fix bug TermPrintAI, numbers above 99 were not printing out correctly.
+
+### xdev
+
+xdev: unmap itself out of slot 5, leave slot 5 mapped to block 5 when program starts
+
+TermPUTS, fix bug where if a <CR> is encountered, and it causes the screen to scroll, share temp variables may cause an infinite number of linefeeds to happen
+
+term.s: fix issue with the stack if the screen scrolls, but not by a CR
+
+term: fix bug TermPrintAI, numbers above 99 were not printing out correctly.
+
+pcopy: add support for file copy request form the FoenixMgr
+
+### BASIC help
+
+Support various keys for going back.
+
+Make sure we stay away from certain 65C02 instructions to make the code 816 compatible.
+
+### DOS
+
+New "lsf" command for listing flash programs.
+
+Displays flash program block info, headlines added
+
+Added support for quoted arguments
 
 # 2023.5
 
