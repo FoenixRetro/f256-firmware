@@ -26,7 +26,7 @@ They are:
 To work on the firmware, clone the repository recursively:
 
 ```
-git clone --rec https://github.com/FoenixRetro/f256-flash.git
+git clone --rec https://github.com/FoenixRetro/f256-firmware.git
 ```
 
 If you have write access to the FoenixRetro organization, you must add these lines to your `.gitconfig`, as submodules are added as `https` references.
