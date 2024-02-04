@@ -95,5 +95,5 @@ fnxmgr-install: fnxmgr
     rm -f f256_firmware_{{version}}.zip
     cp Changelog.md {{build_dir}}
     cp HowToUpgrade.md {{build_dir}}
-    cp Versions.jpg {{build_dir}}
+    cp Versions.txt {{build_dir}}
     cd {{build_dir}}; zip -r ../f256_firmware_{{version}}.zip * 
