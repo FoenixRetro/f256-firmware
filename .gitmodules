@@ -25,3 +25,6 @@
 [submodule "extern/fnxmgr"]
 	path = extern/fnxmgr
 	url = https://github.com/FoenixRetro/FoenixMgr.git
+[submodule "extern/F256_wget"]
+	path = extern/F256_wget
+	url = https://github.com/FoenixRetro/F256_wget.git
