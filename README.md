@@ -58,6 +58,7 @@ Available build recipes in the `.justfile` are:
 * `just pexec` - builds pexec
 * `just docs` - builds SuperBASIC help viewer
 * `just xdev` - builds xdev
+* `just wget` - builds wget
 
 To flash and test a component, the following receipes are available:
 

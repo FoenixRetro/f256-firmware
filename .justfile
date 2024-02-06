@@ -32,6 +32,14 @@ pexec:
     cd ../../
     cp extern/pexec/pexec.bin {{firmware_dir}}
 
+wgetclean:
+    #!/bin/sh
+    cd extern/F256_wget
+    make clean
+    make
+    cd ../..
+    cp extern/F256_wget/wget.bin {{firmware_dir}}
+
 wget:
     #!/bin/sh
     cd extern/F256_wget
