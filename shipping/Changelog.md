@@ -1,5 +1,7 @@
 # 2024.1 (RC1)
 
+**Overall** This release updates all components to their most current versions as of February 8th 2024. Additonally `wget` has been added as a new component.
+
 ### Kernel
 
 Kernel docs: note DIP6 function on the F256K, fix a typo.
