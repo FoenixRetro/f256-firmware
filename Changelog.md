@@ -22,6 +22,8 @@ Fixed wrong error reporting in `verify` command.
 
 Add autorepeat functionality in BASIC editor
 
+Fix syntax error when using @ operator
+
 ### pexec
 
 Slot 5 remapping wasn't working due to a type-o, which also was leaving mmu in a bad state.
