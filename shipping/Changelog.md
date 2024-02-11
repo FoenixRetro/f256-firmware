@@ -26,6 +26,8 @@ Add autorepeat functionality in BASIC editor
 
 Fix syntax error when using @ operator
 
+Make function keys work again after kernel change in meta flags for function keys
+
 ### pexec
 
 Slot 5 remapping wasn't working due to a type-o, which also was leaving mmu in a bad state.
