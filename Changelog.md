@@ -1,4 +1,16 @@
-# 2024.1 (RC1)
+# 2024.3
+
+### pexec
+
+Allow to start a program from all devices not just device 0.
+
+# 2024.2
+
+### SuperBASIC
+
+Fix problem with function keys on F256K keyboard.
+
+# 2024.1
 
 **Overall** This release updates all components to their most current versions as of February 8th 2024. Additonally `wget` has been added as a new component.
 
