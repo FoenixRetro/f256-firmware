@@ -1,3 +1,9 @@
+# 2024.4
+
+### f/manager
+
+First release to include f/manager
+
 # 2024.3
 
 ### pexec
