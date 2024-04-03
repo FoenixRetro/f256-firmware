@@ -28,3 +28,6 @@
 [submodule "extern/F256_wget"]
 	path = extern/F256_wget
 	url = https://github.com/FoenixRetro/F256_wget.git
+[submodule "extern/F256jr-FileManager"]
+	path = extern/F256jr-FileManager
+	url = https://github.com/FoenixRetro/F256-FileManager
