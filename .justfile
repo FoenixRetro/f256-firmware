@@ -3,6 +3,7 @@ firmware_dir := "shipping/firmware"
 samples_dir := "shipping/samples"
 fpga_dir := "shipping/fpga"
 release_zip := "firmware.zip"
+fman_dir := `realpath extern`
 
 basic:
     #!/bin/sh
@@ -72,6 +73,14 @@ fnxmgr:
     zip ../../../shipping/firmware/fnxmgr.zip *.py -x fnxmgr.py
     rm __main__.py    
     cd ../../..
+
+fmanager:
+    #!/bin/zsh
+    cd extern/F256jr-FileManager
+    perl strings2binary.pl strings
+    zsh _build_vbcc.sh {{fman_dir}}
+    cp build_cc65/fm_install/flash/fm.0? ../../shipping/firmware/
+    cp build_cc65/fm_install/flash/*.csv ../../shipping/firmware/bulk_alternative
 
 fnxmgr-install: fnxmgr
     #!/bin/sh
