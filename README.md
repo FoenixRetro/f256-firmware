@@ -22,6 +22,7 @@ They are:
 * 64tass (https://sourceforge.net/projects/tass64/)
 * cc65 (https://cc65.github.io/)
 * Merlin32 (https://github.com/lroathe/merlin32)
+* `zsh` has to be installed. Some build scripts depend on it.
 
 To work on the firmware, clone the repository recursively:
 
@@ -59,8 +60,10 @@ Available build recipes in the `.justfile` are:
 * `just docs` - builds SuperBASIC help viewer
 * `just xdev` - builds xdev
 * `just wget` - builds wget
+* `just fmanager` - builds f/manager
 
-To flash and test a component, the following receipes are available:
+To flash and test a component, the following receipes are available. Be careful these recipes are not
+always up to date:
 
 * `just flash` - Flashes all the components
 * `just flash-dos` - Flashes only DOS
