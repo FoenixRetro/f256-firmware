@@ -22,7 +22,8 @@ They are:
 * 64tass (https://sourceforge.net/projects/tass64/)
 * cc65 (https://cc65.github.io/)
 * Merlin32 (https://github.com/lroathe/merlin32)
-* `zsh` has to be installed. Some build scripts depend on it.
+* zsh (https://www.zsh.org/)
+* perl (https://www.perl.org/)
 
 To work on the firmware, clone the repository recursively:
 
@@ -44,7 +45,7 @@ git pull --recurse-submodules
 ```
 
 ## Workflow
-Currently the firmware is easiest to build on Linux, Mac, and WSL or Cygwin on Windows. The [`just`](https://github.com/casey/just) tool is used to manage the different workflows.
+Currently the firmware is easiest to build on Linux. It should also work on Mac and WSL on Windows. I personally (`@rmsk2`) have never tested it under Cygwin on Windows but in theory it should work too. The [`just`](https://github.com/casey/just) tool is used to manage the different workflows.
 
 There is no recipe for building the complete firmware. Instead, components are built individually while developing. When using a recipe for building a component, the build artifacts are copied into the `shipping/firmware` directory. While keeping binary artifacts in a repository is generally considered a bad idea, in this case it is necessary, as some components will update their "built date" when building, and the binaries should not be changed when there are no changes.
 
@@ -62,8 +63,7 @@ Available build recipes in the `.justfile` are:
 * `just wget` - builds wget
 * `just fmanager` - builds f/manager
 
-To flash and test a component, the following receipes are available. Be careful these recipes are not
-always up to date:
+To flash and test a component, the following receipes are available. Be careful these recipes are probably out of date and may not work:
 
 * `just flash` - Flashes all the components
 * `just flash-dos` - Flashes only DOS
