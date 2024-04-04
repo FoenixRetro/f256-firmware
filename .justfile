@@ -76,9 +76,10 @@ fnxmgr:
 
 fmanager:
     #!/bin/zsh
+    cp build_fman_tmp.sh extern/F256jr-FileManager
     cd extern/F256jr-FileManager
     perl strings2binary.pl strings
-    zsh _build_vbcc.sh {{fman_dir}}
+    zsh build_fman_tmp.sh {{fman_dir}}
     cp build_cc65/fm_install/flash/fm.0? ../../shipping/firmware/
     cp build_cc65/fm_install/flash/*.csv ../../shipping/firmware/bulk_alternative
 
