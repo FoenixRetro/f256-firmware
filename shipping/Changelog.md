@@ -1,3 +1,21 @@
+# 2025.1
+
+### Kernel
+
+Update the K2 Optical Keyboard driver for the production board.
+
+SDC: flush block writes; remove debug code from block reads.
+
+### FoenixMgr
+
+Merge pull request pweingar#14 from dwsJason/zero_kernel_args
+
+Erase Command
+
+### FPGA
+
+Add a new load for the Jr. and the K
+
 # 2024.4
 
 ### f/manager

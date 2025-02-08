@@ -19,8 +19,8 @@ You will need :-
 1) 	Python3 installed (http://www.python.org)
 2) 	The Python Serial Library "pyserial" (usually pip install pyserial)
 
-Windows users may need to update the drivers for the EXAR serial ports,
-the file xrusbuser_2600_signed_win7.zip seems to be the most recent.
+Windows users will need to update the drivers for the EXAR serial ports,
+the file XR21x_Win10_V2.7.0.0.zip seems to be the most recent.
 
 -------------------------------------------------------------------------
 
