@@ -1,3 +1,21 @@
+# 2025.5
+
+### Kernel
+
+Don't auto-boot carts if DIP1 (the first one) is on.
+
+# 2025.4
+
+Add latest FPGA load for F256 Jr.
+
+# 2025.3
+
+Add latest FPGA load for the F256K
+
+# 2025.2
+
+Update documentation
+
 # 2025.1
 
 ### Kernel
