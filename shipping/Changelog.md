@@ -1,3 +1,13 @@
+# 2025.6
+
+### Kernel
+
+Integrate Stef's k2_lcd init changes (k2_lcd moved to f256)
+
+Init the audio mixer's analog ports based on board id.
+
+RTC: don't whack lower (6) alarm bits.
+
 # 2025.5
 
 ### Kernel
