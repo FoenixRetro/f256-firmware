@@ -1,3 +1,18 @@
+# 2025.7
+
+### f/manager
+
+Add latest version
+
+### moreorless
+
+First version to include the text editor moreorlesss
+
+### fcart
+
+First version to include this tool which can be used to write data to flash cartridges
+
+### 
 # 2025.6
 
 ### Kernel
