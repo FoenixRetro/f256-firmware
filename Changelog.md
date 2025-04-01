@@ -1,3 +1,9 @@
+# 2025.8
+
+### Kernel
+
+Double the delay (now ~/0.6 seconds) before PS2 ident...
+
 # 2025.7
 
 ### f/manager
