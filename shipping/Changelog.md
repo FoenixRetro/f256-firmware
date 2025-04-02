@@ -1,3 +1,9 @@
+# 2025.9
+
+### f/manager
+
+Add latest version
+
 # 2025.8
 
 ### Kernel
